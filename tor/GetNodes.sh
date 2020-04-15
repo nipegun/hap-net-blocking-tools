@@ -19,7 +19,7 @@ wget -q https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=$WANIP -O - |
   done
 
 echo ""
-echo -e "${ColorVerde}Creating TOR HAProxy sets....${FinColor}"
+echo -e "${ColorVerde}  Creating TOR HAProxy sets....${FinColor}"
 echo ""
 find /root/scripts/hap-net-blocking-tools/tor/ -name "*.haproxy" -exec sed -i '1d' {} \;
 find /root/scripts/hap-net-blocking-tools/tor/ -name "*.haproxy" -exec sed -i 's/.$//' {} \;

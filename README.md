@@ -1,6 +1,6 @@
 # hap-net-blocking-tools
 
-HAProxy tools to block some internet traffic
+HAProxy methods to block some internet traffic
 
 ## Installation
 

@@ -30,3 +30,6 @@ find     /root/scripts/hap-net-blocking-tools/geoipsets/haproxyset/ipv6/ -name "
 find     /root/scripts/hap-net-blocking-tools/geoipsets/haproxyset/ipv6/ -name "*.haproxy" -exec sed -i 's/^............//' {} \;
 find     /root/scripts/hap-net-blocking-tools/geoipsets/haproxyset/ipv6/ -name "*.haproxy" -exec sed -i 's/...........$//' {} \;
 find     /root/scripts/hap-net-blocking-tools/geoipsets/haproxyset/ipv6/ -name "*.haproxy" -exec sed -i 's| comment | |g' {} \;
+
+# Call the removing-useless-files script
+/root/scripts/hap-net-blocking-tools/DeleteUselessFiles.sh

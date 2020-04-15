@@ -10,7 +10,7 @@ ColorVerde='\033[1;32m'
 FinColor='\033[0m'
 
 echo ""
-echo -e "${ColorVerde}  Creating GeoIP HAProxy sets....${FinColor}"
+echo -e "${ColorVerde}  - Creating GeoIP HAProxy sets....${FinColor}"
 echo ""
 
 #IPv4

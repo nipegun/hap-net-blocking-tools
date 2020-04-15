@@ -35,6 +35,7 @@ wget -q --tries=10 --timeout=20 --spider https://github.com
        /root/scripts/hap-net-blocking-tools/geoipsets/CreateIPSets.sh -k fqkr86Z0eBqPoHQe
        /root/scripts/hap-net-blocking-tools/geoipsets/CreateIPSets-HAProxy.sh
        /root/scripts/hap-net-blocking-tools/tor/GetNodes.sh
+       /root/scripts/hap-net-blocking-tools/DeleteUselessFiles.sh
   else
     echo ""
     echo -e "${ColorRojo}The RepoSync coulden´t start because no internet connection was detected.${FinColor}"

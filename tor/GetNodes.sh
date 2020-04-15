@@ -9,9 +9,6 @@ ColorRojo='\033[1;31m'
 ColorVerde='\033[1;32m'
 FinColor='\033[0m'
 
-echo ""
-echo -e "${ColorVerde}Getting TOR Nodes....${FinColor}"
-echo ""
 # Obtain WAN IP of the computer
 WANIP=$(curl --silent ipinfo.io/ip)
 # Create the HAProxy sets

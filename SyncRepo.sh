@@ -29,7 +29,7 @@ wget -q --tries=10 --timeout=20 --spider https://github.com
     echo -e "${ColorVerde}Repo synced correctly.${FinColor}"
     echo ""
     echo ""
-    echo -e "${ColorVerde}Getting HAProxy GeoIP sets....${FinColor}"
+    echo -e "${ColorVerde}Starting post-sync tasks....${FinColor}"
     echo ""
     cd /root/scripts/hap-net-blocking-tools/
        /root/scripts/hap-net-blocking-tools/geoipsets/CreateIPSets.sh -k fqkr86Z0eBqPoHQe

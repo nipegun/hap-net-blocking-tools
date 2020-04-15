@@ -19,8 +19,6 @@ truncate -s 0 /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv4.haproxy
 truncate -s 0 /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv6.haproxy
 wget -q https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=$WANIP -O - | sed '/^#/d' | while read IP
   do
-    # sed -i '/^define TORNodes.ipv4 = {/a '"$IP"',' /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv4.haproxy
-    # sed -i '/^define TORNodes.ipv6 = {/a '"$IP"',' /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv6.haproxy
     echo $IP >> /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv4.haproxy
   done
 find /root/scripts/hap-net-blocking-tools/tor/ -name "*.haproxy" -exec sed -i '1d' {} \;

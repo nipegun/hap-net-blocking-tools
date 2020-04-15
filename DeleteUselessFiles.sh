@@ -17,6 +17,3 @@ echo ""
 rm /root/scripts/hap-net-blocking-tools/geoipsets/ipset -R 2> /dev/null
 rm /root/scripts/hap-net-blocking-tools/geoipsets/nftset -R 2> /dev/null
 
-# Remove the scripts used to create the sets
-rm /root/scripts/hap-net-blocking-tools/geoipsets/CreateIPSets-HAProxy.sh 2> /dev/null
-rm /root/scripts/hap-net-blocking-tools/geoipsets/CreateIPSets.sh 2> /dev/null

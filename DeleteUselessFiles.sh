@@ -10,7 +10,7 @@ ColorVerde='\033[1;32m'
 FinColor='\033[0m'
 
 echo ""
-echo -e "${ColorVerde}Deleting no longer needed files...${FinColor}" 
+echo -e "${ColorVerde}  Deleting no longer needed files...${FinColor}" 
 echo ""
 
 # Remove the IPTables and NFTables sets

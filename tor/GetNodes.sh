@@ -14,17 +14,15 @@ echo -e "${ColorVerde}Getting TOR Nodes....${FinColor}"
 echo ""
 # Obtain WAN IP of the computer
 WANIP=$(curl --silent ipinfo.io/ip)
-# Create the NFTables sets
+# Create the HAProxy sets
 wget -q https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=$WANIP -O -|sed '/^#/d' |while read IP
   do
-    sed -i '/^define TORNodes.ipv4 = {/a '"$IP"',' /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv4.nftables
-    sed -i '/^define TORNodes.ipv6 = {/a '"$IP"',' /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv6.nftables
+    sed -i '/^define TORNodes.ipv4 = {/a '"$IP"',' /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv4.haproxy
+    sed -i '/^define TORNodes.ipv6 = {/a '"$IP"',' /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv6.haproxy
   done
 
 echo ""
 echo -e "${ColorVerde}Creating TOR HAProxy sets....${FinColor}"
 echo ""
-mv   /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv4.nftables /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv4.haproxy
-mv   /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv6.nftables /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv6.haproxy
 find /root/scripts/hap-net-blocking-tools/tor/ -name "*.haproxy" -exec sed -i '1d' {} \;
 find /root/scripts/hap-net-blocking-tools/tor/ -name "*.haproxy" -exec sed -i 's/.$//' {} \;

@@ -29,7 +29,7 @@ wget -q --tries=10 --timeout=20 --spider https://github.com
     echo -e "${ColorVerde}Repo synced correctly.${FinColor}"
     echo ""
     echo ""
-    echo -e "${ColorGreen}Getting HAProxy GeoIP sets....${EndColor}"
+    echo -e "${ColorVerde}Getting HAProxy GeoIP sets....${FinColor}"
     echo ""
     cd /root/scripts/hap-net-blocking-tools/
        /root/scripts/hap-net-blocking-tools/geoipsets/CreateIPSets.sh -k fqkr86Z0eBqPoHQe
@@ -37,7 +37,7 @@ wget -q --tries=10 --timeout=20 --spider https://github.com
        /root/scripts/hap-net-blocking-tools/tor/GetNodes.sh
   else
     echo ""
-    echo -e "${ColorRed}The RepoSync coulden´t start because no internet connection was detected.${EndColor}"
+    echo -e "${ColorRojo}The RepoSync coulden´t start because no internet connection was detected.${FinColor}"
     echo ""
 fi
 

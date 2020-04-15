@@ -17,4 +17,6 @@ cd /root/scripts/hap-net-blocking-tools/
    /root/scripts/hap-net-blocking-tools/geoipsets/CreateGeoIPHAProxySet.sh
    /root/scripts/hap-net-blocking-tools/tor/CreateTORHAProxySet.sh
    /root/scripts/hap-net-blocking-tools/DeleteUselessFiles.sh
-
+echo ""
+echo -e "${ColorVerde}DONE!!${FinColor}"
+echo ""

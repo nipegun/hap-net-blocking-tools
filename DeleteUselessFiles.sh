@@ -14,9 +14,9 @@ echo -e "  ${ColorVerde}Deleting no longer needed files...${EndColor}"
 echo ""
 
 # Remove the IPTables and NFTables sets
-rm /root/scripts/hap-net-blocking-tools/geoipsets/ipset
-rm /root/scripts/hap-net-blocking-tools/geoipsets/nftset
+rm /root/scripts/hap-net-blocking-tools/geoipsets/ipset 2> /dev/null
+rm /root/scripts/hap-net-blocking-tools/geoipsets/nftset 2> /dev/null
 
 # Remove the scripts used to create the sets
-rm /root/scripts/hap-net-blocking-tools/geoipsets/CreateIPSets-HAProxy.sh
-rm /root/scripts/hap-net-blocking-tools/geoipsets/CreateIPSets.sh
+rm /root/scripts/hap-net-blocking-tools/geoipsets/CreateIPSets-HAProxy.sh 2> /dev/null
+rm /root/scripts/hap-net-blocking-tools/geoipsets/CreateIPSets.sh 2> /dev/null

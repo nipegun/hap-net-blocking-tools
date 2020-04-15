@@ -17,7 +17,7 @@ EndColor='\033[0m'
 wget -q --tries=10 --timeout=20 --spider https://github.com
   if [[ $? -eq 0 ]]; then
     echo ""
-    echo -e "  ${ColorGreen}Syncing hap-net-blocking-tools repo...${EndColor}" 
+    echo -e "${ColorGreen}Syncing hap-net-blocking-tools repo...${EndColor}" 
     echo ""
     rm /root/scripts/hap-net-blocking-tools -R 2> /dev/null
     cd /root/scripts

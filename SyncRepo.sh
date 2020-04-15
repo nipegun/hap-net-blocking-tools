@@ -9,15 +9,15 @@
 #  Script to Sync the hap-net-blocking-tools repo
 #--------------------------------------------------
 
-ColorRed='\033[1;31m'
-ColorGreen='\033[1;32m'
-EndColor='\033[0m'
+ColorRojo='\033[1;31m'
+ColorVerde='\033[1;32m'
+FinColor='\033[0m'
 
 # Check if there is internet connection before syncing the repo
 wget -q --tries=10 --timeout=20 --spider https://github.com
   if [[ $? -eq 0 ]]; then
     echo ""
-    echo -e "${ColorGreen}Syncing hap-net-blocking-tools repo...${EndColor}" 
+    echo -e "${ColorVerde}Syncing hap-net-blocking-tools repo...${FinColor}" 
     echo ""
     rm /root/scripts/hap-net-blocking-tools -R 2> /dev/null
     cd /root/scripts
@@ -26,10 +26,10 @@ wget -q --tries=10 --timeout=20 --spider https://github.com
       rm /root/scripts/hap-net-blocking-tools/README.md 2> /dev/null
     find /root/scripts/hap-net-blocking-tools/ -type f -iname "*.sh" -exec chmod +x {} \;
     echo ""
-    echo -e "${ColorGreen}Repo synced correctly.${EndColor}"
+    echo -e "${ColorVerde}Repo synced correctly.${FinColor}"
     echo ""
     echo ""
-    echo -e "${ColorGreen}Getting GeoIP NFTables & IPTables sets....${EndColor}"
+    echo -e "${ColorGreen}Getting HAProxy GeoIP sets....${EndColor}"
     echo ""
     cd /root/scripts/hap-net-blocking-tools/
        /root/scripts/hap-net-blocking-tools/geoipsets/CreateIPSets.sh -k fqkr86Z0eBqPoHQe

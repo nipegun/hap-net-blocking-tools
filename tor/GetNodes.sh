@@ -22,7 +22,7 @@ wget -q https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=$WANIP -O -|s
   done
 
 echo ""
-echo -e "${ColorGreen}Creating TOR HAProxy sets....${EndColor}"
+echo -e "${ColorVerde}Creating TOR HAProxy sets....${FinColor}"
 echo ""
 mv   /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv4.nftables /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv4.haproxy
 mv   /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv6.nftables /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv6.haproxy

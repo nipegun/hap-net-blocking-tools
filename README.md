@@ -13,6 +13,7 @@ git clone --depth=1 https://github.com/nipegun/hap-net-blocking-tools
   rm /root/scripts/hap-net-blocking-tools/.git -R 2> /dev/null
   rm /root/scripts/hap-net-blocking-tools/README.md 2> /dev/null
 find /root/scripts/hap-net-blocking-tools/ -type f -iname "*.sh" -exec chmod +x {} \;
+/root/scripts/hap-net-blocking-tools/PostSyncTasks.sh
 ```
 ## Tools
 

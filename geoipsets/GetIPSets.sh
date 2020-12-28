@@ -5,7 +5,7 @@
 # Si se te llena la boca hablando de libertad entonces hazlo realmente libre.
 # No tienes que aceptar ningún tipo de términos de uso o licencia para utilizarlo o modificarlo porque va sin CopyLeft.
 
-# https://github.com/chr0mag/geoipsets/blob/master/build-country-sets.sh
+# https://github.com/chr0mag/geoipsets/blob/master/bash/build-country-sets.sh
 
 # write permission to '/etc' required
 
@@ -112,7 +112,7 @@ function build_ipv4_sets {
 
     #create ipset file if it doesn't exist
     if [[ ! -f $IPSET_FILE ]]; then
-      echo "create $SET_NAME hash:net comment" > $IPSET_FILE
+      echo "create $SET_NAME hash:net maxelem 131072 comment" > $IPSET_FILE
     fi
     echo "add ${SET_NAME} ${SUBNET} comment ${CC}" >> $IPSET_FILE
 
@@ -236,3 +236,4 @@ function main() {
 }
 
 main "$@"
+

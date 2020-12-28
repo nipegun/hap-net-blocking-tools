@@ -17,7 +17,7 @@ WANIP=$(curl --silent ipinfo.io/ip)
 # Create the HAProxy sets
 truncate -s 0 /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/KWA-IPv4.haproxy
 truncate -s 0 /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/KWA-IPv6.haproxy
-echo 5.50.50.50 >> KWA-IPv4.haproxy
+echo 5.50.50.50 >> /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/KWA-IPv4.haproxy
 
 # Borrar la primera línea del archivo
 find /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/ -name "*.haproxy" -exec sed -i '1d' {} \;

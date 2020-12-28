@@ -12,15 +12,14 @@ FinColor='\033[0m'
 echo ""
 echo -e "${ColorVerde}  - Creating Known Wordpress Attackers HAProxy sets....${FinColor}"
 echo ""
-# Obtain WAN IP of the computer
-WANIP=$(curl --silent ipinfo.io/ip)
+
 # Create the HAProxy sets
 truncate -s 0 /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/KWA-IPv4.haproxy
 truncate -s 0 /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/KWA-IPv6.haproxy
 echo 5.50.50.50 >> /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/KWA-IPv4.haproxy
 
 # Borrar la primera línea del archivo
-find /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/ -name "*.haproxy" -exec sed -i '1d' {} \;
+#find /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/ -name "*.haproxy" -exec sed -i '1d' {} \;
 
 # Ordenar las IPs de forma ascendente
 sort -t . -k 1,1n /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/KWA-IPv4.haproxy -o /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/KWA-IPv4.haproxy

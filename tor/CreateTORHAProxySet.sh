@@ -24,5 +24,8 @@ wget -q https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=$WANIP -O - |
 # Borrar la primera línea del archivo
 find /root/scripts/hap-net-blocking-tools/tor/ -name "*.haproxy" -exec sed -i '1d' {} \;
 
+# Ordenar las IPs de forma ascendente
+sort -t . -k 1,1n /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv4.haproxy -o /root/scripts/hap-net-blocking-tools/tor/TORNodesIPv4.haproxy
+
 #find /root/scripts/hap-net-blocking-tools/tor/ -name "*.haproxy" -exec sed -i 's/.$//' {} \;
 

@@ -15,6 +15,7 @@ echo ""
 cd /root/scripts/hap-net-blocking-tools/
    /root/scripts/hap-net-blocking-tools/geoipsets/GetIPSets.sh -k fqkr86Z0eBqPoHQe
    /root/scripts/hap-net-blocking-tools/geoipsets/CreateGeoIPHAProxySet.sh
+   /root/scripts/hap-net-blocking-tools/known-wordpress-attackers/CreateKWAHAProxySet.sh 
    /root/scripts/hap-net-blocking-tools/tor/CreateTORHAProxySet.sh
    /root/scripts/hap-net-blocking-tools/DeleteUselessFiles.sh
 echo ""

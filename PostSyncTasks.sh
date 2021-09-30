@@ -9,6 +9,16 @@ ColorRojo='\033[1;31m'
 ColorVerde='\033[1;32m'
 FinColor='\033[0m'
 
+## Check if ipset package is installed. If not, install it.
+   if [[ $(dpkg-query -s ipset 2>/dev/null | grep installed) == "" ]]; then
+     echo ""
+     echo "  ipset is not installed. Installing it..."
+     echo ""
+     apt-get -y update > /dev/null
+     apt-get -y install ipset
+     echo ""
+   fi
+
 echo ""
 echo -e "${ColorVerde}Starting post-sync tasks....${FinColor}"
 echo ""

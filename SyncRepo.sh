@@ -27,7 +27,7 @@ FinColor='\033[0m'
 wget -q --tries=10 --timeout=20 --spider https://github.com
   if [[ $? -eq 0 ]]; then
     echo ""
-    echo -e "${ColorVerde}Syncing hap-net-blocking-tools repo...${FinColor}" 
+    echo -e "${ColorVerde}  Syncing hap-net-blocking-tools repo...${FinColor}" 
     echo ""
     rm /root/scripts/hap-net-blocking-tools -R 2> /dev/null
     cd /root/scripts
@@ -47,13 +47,13 @@ wget -q --tries=10 --timeout=20 --spider https://github.com
     ## Set permissions
        find /root/scripts/hap-net-blocking-tools/ -type f -iname "*.sh" -exec chmod +x {} \;
     echo ""
-    echo -e "${ColorVerde}Repo synced correctly.${FinColor}"
+    echo -e "${ColorVerde}  Repo synced correctly.${FinColor}"
     echo ""
     ## Start PostSyncTasks
        /root/scripts/hap-net-blocking-tools/PostSyncTasks.sh
   else
     echo ""
-    echo -e "${ColorRojo}The RepoSync coulden´t start because no internet connection was detected.${FinColor}"
+    echo -e "${ColorRojo}  The RepoSync coulden´t start because no internet connection was detected.${FinColor}"
     echo ""
 fi
 

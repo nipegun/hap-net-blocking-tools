@@ -20,7 +20,7 @@ FinColor='\033[0m'
    fi
 
 echo ""
-echo -e "${ColorVerde}Starting post-sync tasks....${FinColor}"
+echo -e "${ColorVerde}  Starting post-sync tasks....${FinColor}"
 echo ""
 cd /root/scripts/hap-net-blocking-tools/
    /root/scripts/hap-net-blocking-tools/geoipsets/GetIPSets.sh -k fqkr86Z0eBqPoHQe
@@ -29,5 +29,5 @@ cd /root/scripts/hap-net-blocking-tools/
    /root/scripts/hap-net-blocking-tools/tor/CreateTORHAProxySet.sh
    /root/scripts/hap-net-blocking-tools/DeleteUselessFiles.sh
 echo ""
-echo -e "${ColorVerde}DONE!!${FinColor}"
+echo -e "${ColorVerde}  DONE!!${FinColor}"
 echo ""

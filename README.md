@@ -4,6 +4,8 @@ HAProxy methods to block some internet traffic
 
 ## Installation
 
+Run as root:
+
 ```shell
 curl --silent https://raw.githubusercontent.com/nipegun/hap-net-blocking-tools/master/SyncRepo.sh | bash
 ```
